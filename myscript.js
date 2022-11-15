@@ -1,7 +1,7 @@
 let display = document.getElementById("display");
-console.log(display);
+
 let buttons = Array.from(document.getElementsByClassName("button"));
-console.log(buttons);
+
 buttons.map(button => {
   button.addEventListener('click',(e)=>{
       console.log(e.target.innerText);
@@ -11,18 +11,13 @@ buttons.map(button => {
         display.innerText = '';
         break;
 
-  
+
     case "Del":
         if (display.innerText) {
           display.innerText = display.innerText.slice(0,-1);
         }
           break;
-    case '/':
-          console.log('indide /');
-              if (display.innerText) {
-                display.innerText = display.innerText.slice(0,-1);
-              }
-                break;
+    
           case '=':
           try{
             console.log(typeof(display.innerText));
